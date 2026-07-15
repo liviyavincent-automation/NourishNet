@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Volunteer Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            text-align:center;
+            margin:40px;
+        }
+
+        h1{
+            color:#2c3e50;
+        }
+
+        h2{
+            color:#555;
+        }
+
+        table{
+            width:90%;
+            margin:auto;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        th{
+            background:#27ae60;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            padding:12px;
+            border:1px solid #ddd;
+        }
+
+        tr:nth-child(even){
+            background:#f9f9f9;
+        }
+
+        button{
+            padding:10px 20px;
+            margin-top:20px;
+            font-size:16px;
+            font-weight:bold;
+            border:none;
+            border-radius:8px;
+            background:#27ae60;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#219150;
+            transform:scale(1.02);
+        }
+
+        .logout{
+            background:#e74c3c;
+            text-decoration:none;
+            color:white;
+            padding:10px 20px;
+            border-radius:8px;
+            display:inline-block;
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        .logout:hover{
+            background:#c0392b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>NourishNet</h1>
+
+<h2>Volunteer Dashboard</h2>
+
+<h3 id="welcome"></h3>
+
+<h3>Assigned Pickup Requests</h3>
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Donor</th>
+            <th>NGO</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody id="pickupTable">
+
+    </tbody>
+
+</table>
+
+<button onclick="window.location.href='chatbot.html'">
+    Chat with NourishBot
+</button>
+
+<br>
+
+<a class="logout" href="index.html">Logout</a>
+
+<script>
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+    document.getElementById("welcome").innerHTML =
+    "Welcome, " + user.fullName + "!";
+}
+
+</script>
+
+<script src="volunteer.js"></script>
+
+</body>
+
+</html>

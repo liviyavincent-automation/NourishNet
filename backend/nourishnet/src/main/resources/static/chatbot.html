@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NourishNet AI Assistant</title>
+
+
+<style>
+
+
+body{
+
+    font-family:Arial;
+    background:#f4f6f9;
+    text-align:center;
+    margin:0;
+    padding:0;
+
+}
+
+
+
+.header{
+
+    background:#27ae60;
+    color:white;
+    padding:25px;
+
+}
+
+
+
+.container{
+
+    width:80%;
+    max-width:700px;
+    margin:40px auto;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+}
+
+
+
+textarea{
+
+    width:90%;
+    height:120px;
+    padding:15px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    resize:none;
+
+}
+
+
+
+button{
+
+    margin-top:20px;
+    padding:12px 30px;
+    font-size:16px;
+    font-weight:bold;
+    background:#27ae60;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#219150;
+    transform:scale(1.03);
+
+}
+
+
+
+#answer{
+
+    margin-top:25px;
+    border-radius:10px;
+    padding:20px;
+    background:#f8f9fa;
+    min-height:120px;
+    text-align:left;
+    border:1px solid #ddd;
+    white-space:pre-wrap;
+
+}
+
+
+
+.back{
+
+    background:#2c3e50;
+
+}
+
+
+
+.back:hover{
+
+    background:#1f2d3a;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+
+<h1>NourishNet</h1>
+
+<h2>NourishBot AI Assistant</h2>
+
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<p>
+
+Ask me about food donation, freshness prediction,
+NGO recommendation, volunteer tracking, or NourishNet features.
+
+</p>
+
+
+
+
+<textarea
+
+id="question"
+
+placeholder="Type your question here...">
+
+</textarea>
+
+
+
+
+<br>
+
+
+
+<button onclick="askBot()">
+
+Ask NourishBot
+
+</button>
+
+
+
+
+<div id="answer">
+
+
+<b>NourishBot:</b>
+
+<br><br>
+
+Answer will appear here...
+
+
+</div>
+
+
+
+<button class="back" onclick="history.back()">
+
+Back
+
+</button>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="chatbot.js"></script>
+
+
+</body>
+
+
+</html>

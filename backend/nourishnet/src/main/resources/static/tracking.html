@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NourishNet Live Tracking</title>
+
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+
+<style>
+
+
+body{
+
+    font-family:Arial;
+    background:#f4f6f9;
+    text-align:center;
+    margin:0;
+    padding:0;
+
+}
+
+
+
+.header{
+
+    background:#27ae60;
+    color:white;
+    padding:25px;
+
+}
+
+
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom:25px;
+
+}
+
+
+
+button{
+
+    padding:12px 25px;
+    margin:10px;
+    font-size:16px;
+    font-weight:bold;
+    border:none;
+    border-radius:8px;
+    background:#27ae60;
+    color:white;
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#219150;
+    transform:scale(1.03);
+
+}
+
+
+
+.info-grid{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+
+
+.info-box{
+
+    width:220px;
+    padding:15px;
+    background:#f8f9fa;
+    border-radius:10px;
+
+}
+
+
+
+.info-box h3{
+
+    color:#27ae60;
+
+}
+
+
+
+#status{
+
+    font-weight:bold;
+    color:#27ae60;
+
+}
+
+
+
+#map{
+
+    height:500px;
+    width:100%;
+    border-radius:12px;
+    border:1px solid #ddd;
+
+}
+
+
+
+a{
+
+    color:#27ae60;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+
+<h1>NourishNet</h1>
+
+<h2>Volunteer Tracking Dashboard</h2>
+
+
+</div>
+
+
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<button onclick="startTracking()">
+
+Start Tracking
+
+</button>
+
+
+
+<button onclick="window.location.href='volunteer-dashboard.html'">
+
+Back to Dashboard
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>Pickup Information</h2>
+
+
+
+<div class="info-grid">
+
+
+
+<div class="info-box">
+
+<h3>Status</h3>
+
+<span id="status">
+Waiting...
+</span>
+
+</div>
+
+
+
+
+<div class="info-box">
+
+<h3>Pickup Status</h3>
+
+<span id="pickupStatus">
+-
+</span>
+
+</div>
+
+
+
+
+<div class="info-box">
+
+<h3>Volunteer</h3>
+
+<span id="volunteerName">
+-
+</span>
+
+</div>
+
+
+
+
+<div class="info-box">
+
+<h3>Donor</h3>
+
+<span id="donorName">
+-
+</span>
+
+</div>
+
+
+
+
+<div class="info-box">
+
+<h3>NGO</h3>
+
+<span id="ngoName">
+-
+</span>
+
+</div>
+
+
+
+<div class="info-box">
+
+<h3>Latitude</h3>
+
+<span id="lat">
+-
+</span>
+
+</div>
+
+
+
+<div class="info-box">
+
+<h3>Longitude</h3>
+
+<span id="lon">
+-
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2> Live Map</h2>
+
+
+<div id="map"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="tracking.js"></script>
+
+
+</body>
+
+
+</html>

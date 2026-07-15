@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NourishNet Pickup Requests</title>
+
+
+<style>
+
+
+body{
+
+    font-family:Arial;
+    background:#f4f6f9;
+    text-align:center;
+    margin:0;
+    padding:0;
+
+}
+
+
+
+.header{
+
+    background:#27ae60;
+    color:white;
+    padding:25px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    width:90%;
+    max-width:1000px;
+    margin:35px auto;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+}
+
+
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+
+
+th{
+
+    background:#27ae60;
+    color:white;
+    padding:12px;
+
+}
+
+
+
+td{
+
+    padding:12px;
+    border:1px solid #ddd;
+
+}
+
+
+
+button{
+
+    width:300px;
+    padding:12px;
+    margin-top:20px;
+    background:#27ae60;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#219150;
+    transform:scale(1.02);
+
+}
+
+
+
+a{
+
+    color:#27ae60;
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+
+
+.status{
+
+    font-weight:bold;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+
+<h1>NourishNet</h1>
+
+<h2>Pickup Requests & Delivery Status</h2>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>Food</th>
+
+<th>Quantity</th>
+
+<th>Donor</th>
+
+<th>Status</th>
+
+<th>Volunteer</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="pickupTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+<br>
+
+
+<button onclick="window.location.href='chatbot.html'">
+
+Chat with NourishBot
+
+</button>
+
+
+
+<br><br>
+
+
+<a href="ngo-dashboard.html">
+
+Back to Dashboard
+
+</a>
+
+
+
+</div>
+
+
+
+
+<script src="ngo-pickups.js"></script>
+
+
+</body>
+
+
+</html>

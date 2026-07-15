@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Donor Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            text-align:center;
+            margin:40px;
+        }
+
+        h1{
+            color:#2c3e50;
+        }
+
+       .card{
+    width:350px;
+    margin:20px auto;
+    padding:25px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:12px;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            border:none;
+            border-radius:8px;
+            background:#27ae60;
+            color:white;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#219150;
+            transform:scale(1.02);
+        }
+
+        .logout{
+            background:#e74c3c;
+        }
+
+        .logout:hover{
+            background:#c0392b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>NourishNet</h1>
+
+<h2>Donor Dashboard</h2>
+<h3 id="welcome"></h3>
+
+<div class="card">
+<button onclick="window.location.href='donate.html'">
+    Donate Food
+</button>
+
+<button onclick="window.location.href='my-donations.html'">
+    My Donations
+</button>
+
+<button onclick="window.location.href='chatbot.html'">
+    Chat with NourishBot
+</button>
+
+<button class="logout" onclick="window.location.href='index.html'">
+    Logout
+</button>
+
+</div>
+
+<script>
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+    document.getElementById("welcome").innerHTML =
+    "Welcome, " + user.fullName + "!";
+}
+
+</script>
+
+</body>
+
+</html>

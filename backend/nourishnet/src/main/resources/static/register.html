@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>NourishNet Registration</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+background:#f4f6f9;
+text-align:center;
+margin:0;
+
+}
+
+
+
+.header{
+
+background:#27ae60;
+color:white;
+padding:25px;
+
+}
+
+
+
+.card{
+
+background:white;
+width:400px;
+margin:35px auto;
+padding:30px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+}
+
+
+
+input,select{
+
+width:90%;
+padding:12px;
+margin-top:8px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:15px;
+
+}
+
+
+
+button{
+
+width:95%;
+padding:12px;
+margin-top:20px;
+background:#27ae60;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+background:#219150;
+
+}
+
+
+
+a{
+
+color:#27ae60;
+font-weight:bold;
+text-decoration:none;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+<h1>NourishNet</h1>
+
+<h2>User Registration</h2>
+
+</div>
+
+
+
+
+<div class="card">
+
+
+
+<form onsubmit="validateRegisterForm(event)">
+
+
+
+<label>Full Name</label>
+
+<br>
+
+<input type="text" id="fullName" placeholder="Enter full name">
+
+
+<br><br>
+
+
+
+<label>Email</label>
+
+<br>
+
+<input type="email" id="email" placeholder="Enter email">
+
+
+<br><br>
+
+
+
+<label>Password</label>
+
+<br>
+
+<input type="password" id="password" placeholder="Create password">
+
+
+<br><br>
+
+
+
+<label>Role</label>
+
+<br>
+
+
+<select id="role">
+
+
+<option value="Donor">
+Donor
+</option>
+
+
+<option value="NGO">
+NGO
+</option>
+
+
+<option value="Volunteer">
+Volunteer
+</option>
+
+
+</select>
+
+
+
+<button type="submit">
+
+Register
+
+</button>
+
+
+</form>
+
+
+
+<br>
+
+
+<a href="index.html">
+
+Back to Home
+
+</a>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
